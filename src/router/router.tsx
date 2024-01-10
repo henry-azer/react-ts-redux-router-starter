@@ -1,27 +1,25 @@
-import { createElement } from "react";
+import { createElement } from 'react';
 import {
   Navigate,
   RouterProvider,
   createBrowserRouter,
-} from "react-router-dom";
-import { BaseLayout, MainLayout, RootError } from "../components";
+} from 'react-router-dom';
+import { BaseLayout, MainLayout, RootError } from '../components';
 
 export const router = createBrowserRouter([
   {
-    path: "",
+    path: '',
     element: <BaseLayout />,
     errorElement: <RootError />,
-    children: [
-      { path: "/login", lazy: () => import("../views/login/Login") },
-    ],
+    children: [{ path: '/login', lazy: () => import('../views/login/Login') }],
   },
   {
-    path: "",
+    path: '',
     element: <MainLayout />,
     errorElement: <RootError />,
     children: [
       { index: true, element: <Navigate to="/" replace /> },
-      { path: "/profile", lazy: () => import("../views/profile/Profile") },
+      { path: '/profile', lazy: () => import('../views/profile/Profile') },
     ],
   },
 ]);

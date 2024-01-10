@@ -1,16 +1,16 @@
 export const en = {
-    login: {
-        title: "Login Page",
+  login: {
+    title: 'Login Page',
+  },
+  profile: {
+    title: 'Profile Page',
+  },
+  layout: {
+    base: {
+      title: 'Base Layout',
     },
-    profile: {
-        title: "Profile Page",
+    main: {
+      title: 'Main Layout',
     },
-    layout: {
-        base: {
-            title: "Base Layout"
-        },
-        main: {
-            title: "Main Layout"
-        },
-    },
+  },
 };

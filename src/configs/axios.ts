@@ -1,32 +1,41 @@
 import axios from 'axios';
-import { APIs_URL } from '../utils/constants/app-constants'
+import { BASE_URL } from '../utils/constants/app-constants';
 
 const instance = axios.create({
-    baseURL: APIs_URL.DEV,
+  baseURL: BASE_URL.DEV,
 });
 
-instance.interceptors.request.use(config => {
-    return config;
+instance.interceptors.request.use((config) => {
+  return config;
 });
 
-instance.interceptors.response.use(response => {
+instance.interceptors.response.use(
+  (response) => {
     return response;
-}, error => {
+  },
+  (error) => {
     if (error.response.status === 401) {
     }
     return Promise.reject(error);
-});
+  },
+);
 
-instance.interceptors.request.use(function (config) {
+instance.interceptors.request.use(
+  function (config) {
     return config;
-}, function (error) {
+  },
+  function (error) {
     return Promise.reject(error);
-});
+  },
+);
 
-instance.interceptors.response.use(function (response) {
+instance.interceptors.response.use(
+  function (response) {
     return response;
-}, function (error) {
+  },
+  function (error) {
     return Promise.reject(error);
-});
+  },
+);
 
 export default instance;

@@ -1,1 +1,1 @@
-export * from "./actions/auth/auth-types";
+export * from './actions/auth/auth-types';

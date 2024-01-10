@@ -1,7 +1,14 @@
-import { createContext, useState, useContext, useEffect, FC, ReactNode } from 'react';
+import {
+  createContext,
+  useState,
+  useContext,
+  useEffect,
+  FC,
+  ReactNode,
+} from 'react';
 
-import {THEME} from '../../utils/constants/app-constants';
-import {LocalStorageProvider} from '../storage/local-storage-provider'; 
+import { THEME } from '../../utils/constants/app-constants';
+import { LocalStorageProvider } from '../storage/local-storage-provider';
 
 type Theme = 'light' | 'dark';
 
@@ -10,7 +17,9 @@ interface ThemeContextProps {
   toggleTheme: () => void;
 }
 
-export const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
+export const ThemeContext = createContext<ThemeContextProps | undefined>(
+  undefined,
+);
 
 export const useTheme = (): ThemeContextProps => {
   const context = useContext(ThemeContext);
@@ -31,7 +40,7 @@ export const ThemeProvider: FC<ThemeProviderProps> = ({ children }) => {
   });
 
   useEffect(() => {
-    document.body.className = theme + "-theme";
+    document.body.className = theme + '-theme';
   }, [theme]);
 
   const toggleTheme = (): void => {

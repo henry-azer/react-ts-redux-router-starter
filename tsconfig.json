@@ -9,9 +9,6 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
     "outDir": "../.cache/typescript-app",
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "noEmit": true
   },
   "include": [
     "**/*.ts",

@@ -1,16 +1,16 @@
 export const ar = {
-    login: {
-        title: "صفحة تسجيل الدخول",
+  login: {
+    title: 'صفحة تسجيل الدخول',
+  },
+  profile: {
+    title: 'الصفحة الشخصية',
+  },
+  layout: {
+    base: {
+      title: 'النموذج الاساسي',
     },
-    profile: {
-        title: "الصفحة الشخصية",
+    main: {
+      title: 'النموذج الرئيسي',
     },
-    layout: {
-        base: {
-            title: "النموذج الاساسي"
-        },
-        main: {
-            title: "النموذج الرئيسي"
-        },
-    },
+  },
 };

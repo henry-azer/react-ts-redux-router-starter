@@ -1,4 +1,3 @@
-
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_REQUEST_CLEAR = 'LOGIN_REQUEST_CLEAR';
 export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
@@ -19,6 +18,6 @@ export const loginFailure = (error: string) => ({
 });
 
 export const loginRequestClear = () => ({
-    type: LOGIN_REQUEST_CLEAR,
-    payload: null,
-  });
+  type: LOGIN_REQUEST_CLEAR,
+  payload: null,
+});
