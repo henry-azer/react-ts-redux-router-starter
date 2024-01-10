@@ -13,4 +13,7 @@ export const ar = {
       title: 'النموذج الرئيسي',
     },
   },
+  snackbar: {
+    show: 'اظهار اشعار',
+  },
 };

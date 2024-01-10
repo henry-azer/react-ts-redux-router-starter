@@ -13,4 +13,7 @@ export const en = {
       title: 'Main Layout',
     },
   },
+  snackbar: {
+    show: 'Show Snackbar',
+  },
 };

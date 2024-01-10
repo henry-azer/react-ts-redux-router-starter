@@ -4,15 +4,9 @@ import {
   RouterProvider,
   createBrowserRouter,
 } from 'react-router-dom';
-import { BaseLayout, MainLayout, RootError } from '../components';
+import { MainLayout, RootError } from '../components';
 
 export const router = createBrowserRouter([
-  {
-    path: '',
-    element: <BaseLayout />,
-    errorElement: <RootError />,
-    children: [{ path: '/login', lazy: () => import('../views/login/Login') }],
-  },
   {
     path: '',
     element: <MainLayout />,
@@ -21,6 +15,11 @@ export const router = createBrowserRouter([
       { index: true, element: <Navigate to="/" replace /> },
       { path: '/profile', lazy: () => import('../views/profile/Profile') },
     ],
+  },
+  {
+    path: '/login',
+    errorElement: <RootError />,
+    lazy: () => import('../views/login/Login'),
   },
 ]);
 
