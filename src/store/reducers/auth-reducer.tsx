@@ -7,6 +7,10 @@ const initialState = {
 };
 
 export const loginReducer = (action: any, state = initialState) => {
+  if (!action || !action.type) {
+    return state;
+  }
+
   switch (action.type) {
     case LOGIN_REQUEST:
       return { ...state, loading: true };
