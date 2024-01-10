@@ -1,11 +1,11 @@
-import { Container, Typography } from "@mui/joy";
+import { Container, Typography } from "@mui/material";
 import { useRouteError } from "react-router-dom";
 
 export const RootError: React.FC = () => {
   const err = useRouteError() as RouteError;
 
   return (
-    <Container sx={{ marginTop: "43vh" }} maxWidth="sm">
+    <Container maxWidth="sm">
       <Typography
         sx={{
           fontSize: "2em",
@@ -13,10 +13,9 @@ export const RootError: React.FC = () => {
           textAlign: "center",
           "& strong": { fontWeight: 400 },
         }}
-        level="h1"
+        variant="h1"
       >
-        <strong>Error {err.status || 500}</strong>:{" "}
-        {err.statusText ?? err.message}
+        Error {err.status || 500}:{" "}{err.statusText ?? err.message}
       </Typography>
     </Container>
   );

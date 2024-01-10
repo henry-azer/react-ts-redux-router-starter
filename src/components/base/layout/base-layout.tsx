@@ -1,7 +1,7 @@
 import { Fragment, Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Box } from "@mui/joy";
+import { Box } from "@mui/material";
 import Typography from '@mui/material/Typography';
 
 import { useTranslation } from "react-i18next";
