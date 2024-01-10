@@ -26,12 +26,10 @@ body {
 
 .light-theme {
   @import './base/light-styles.scss';
-  transition: background-color 0.5s ease;
 }
 
 .dark-theme {
   @import './base/dark-styles.scss';
-  transition: background-color 0.5s ease;
 }
 
 .prevent-drag {
